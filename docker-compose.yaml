@@ -28,7 +28,7 @@ services:
         environment: 
             - POSTGRES_DB=User 
             - POSTGRES_USER=postgres
-            - POSTGRES_PASSWORD=Gagijames23
+            - POSTGRES_PASSWORD=PasswordGoesHere
         volumes:
             - ./UserDB.sql:/docker-entrypoint-initdb.d/init.sql
     hoteldb:
@@ -39,7 +39,7 @@ services:
         environment: 
             - POSTGRES_DB=Hotel 
             - POSTGRES_USER=postgres
-            - POSTGRES_PASSWORD=Gagijames23
+            - POSTGRES_PASSWORD=PasswordGoesHere
         volumes:
             - ./HotelDB.sql:/docker-entrypoint-initdb.d/init.sql
     traveldb:
@@ -50,7 +50,7 @@ services:
         environment: 
             - POSTGRES_DB=Travel 
             - POSTGRES_USER=postgres
-            - POSTGRES_PASSWORD=Gagijames23
+            - POSTGRES_PASSWORD=PasswordGoesHere
         volumes:
           - ./TravelDB.sql:/docker-entrypoint-initdb.d/init.sql
     mssqldb:
