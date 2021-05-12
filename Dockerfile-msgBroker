@@ -1,0 +1,16 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
+WORKDIR /app
+
+COPY ["MessageBroker.Consumers/MessageBroker.Consumers.csproj" ,"MessageBroker.Consumers/MessageBroker.Consumers.csproj"]
+COPY ["MessageBroker/MessageBroker.csproj","MessageBroker/MessageBroker.csproj"]
+
+RUN dotnet restore "MessageBroker.Consumers/MessageBroker.Consumers.csproj"
+RUN dotnet restore "MessageBroker/MessageBroker.csproj"
+
+
+COPY . ./
+RUN dotnet publish "MessageBroker/MessageBroker.csproj" -c  Release -o out
+
+FROM masstransit/platform:latest
+WORKDIR /app
+COPY --from=build-env /app/out .

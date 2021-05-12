@@ -1,0 +1,25 @@
+.circle__item__container{
+    position: absolute;
+    width:50%;
+    height:10px;
+    bottom:0.1%;
+    z-index: 100;
+    display: flex;
+    left:25%;
+    justify-content: space-around;
+    justify-items: center;
+}
+.span__item{
+    border-radius:50%;
+    height: 5px;
+    width:5px;
+    display: inline-block;
+    background-color: white;
+    margin: 0 auto;
+}
+.white{
+    background-color: white;
+}
+.orange{
+    background-color: orange;
+}

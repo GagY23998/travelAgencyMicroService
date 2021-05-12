@@ -1,0 +1,99 @@
+:root{
+    --gradBackground: -moz-linear-gradient(to right,rgb(255, 230, 0,0.7),rgb(255, 123, 0));
+}
+
+.formContainer{
+    background: var(--gradBackground);
+    height:100%;
+    width:100%;
+    border-radius: inherit;
+}
+.formHeader{
+    text-align: center;
+    color:whitesmoke;
+    text-transform: uppercase;
+    font-size:1.75rem;
+}
+.contactForm{
+    height:100%;
+    min-width:300px;
+    display:flex;
+    flex-flow:column wrap;
+    color:coral;
+    margin:10% 0 0 0;
+    border-radius: 0 0 25px 25px;
+    background: white;
+}
+.formSection{
+    width:50%;
+    min-width:50%;
+    margin: 0 auto;
+    margin-top:1.2em;
+    display:flex;
+    gap:1.25rem;
+}
+.formLabel,.formInput,.formTextArea{
+    width:50%;
+    color:coral;
+}
+.formInput{
+    outline: none;
+    text-decoration: none;
+    appearance: none;
+    border-radius:5px;
+    border: coral 1px solid;
+    background:transparent;
+    padding:0 5px;
+}
+
+.formTextArea{
+    border-radius:5px;
+    background: transparent;
+    border:coral 1px solid;
+}
+.buttonSection{
+    display:flex;
+    margin:5% auto 5% auto;
+}
+.btn__Submit,.btn__Reset{
+    color:coral;
+    padding: 0.25rem 0.5rem;
+    margin: 1rem 5rem 0 5rem;
+    border-radius:5px;
+    background: transparent;
+    border:coral 1px solid;
+}
+.btn__Submit:hover{
+    color:white;
+    background-color: coral;
+    border:white 1px solid;
+    transition: background-color ease-in-out .45s,
+    border ease-in-out .25s,
+    color ease-in-out .25s;
+}
+.btn__Reset:hover{
+    color:white;
+    background-color: red;
+    border:white 1px solid;
+    transition: background-color ease-in-out .45s,
+    border ease-in-out .25s,
+    color ease-in-out .25s;
+}
+
+
+@media screen and (max-width:500px){
+    .formSection{
+        display: flex;
+        flex-flow:column wrap;
+        min-width: 100%;
+        margin:5% auto;
+        align-content: center;
+    }
+    .btn__Submit,.btn__Reset{
+        margin:0 2%;
+    } 
+    .buttonSection{
+        margin-top:5%;
+    }
+
+}

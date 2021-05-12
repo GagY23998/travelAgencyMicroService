@@ -1,0 +1,23 @@
+.layout{
+    height:100%;
+    grid-area: main;
+    background: transparent;
+    border-radius:25px;
+    /* box-shadow: 1px 1px 10px 1px rgba(141, 138, 138, 0.788); */
+    width:75%;
+    position: relative;
+    left:12.5%;
+    margin-top:20px;
+    padding-bottom: 5%;
+}
+/* .layout::before{
+    position: absolute;
+    height:100%;
+    content:' ';
+    background: rgba(255, 255, 255, 0.281);
+    border-radius:25px;
+    filter:blur(2px);
+    box-shadow: 1px 1px 10px 1px rgba(141, 138, 138, 0.788);
+    width:100%;
+    z-index: -1;
+} */

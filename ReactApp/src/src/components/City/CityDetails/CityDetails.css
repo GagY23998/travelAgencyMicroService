@@ -1,0 +1,23 @@
+.cityDetails_Wrapper{
+    width:75%;
+    position: relative;
+    overflow:auto;
+    height:auto;
+    margin: 0 auto;
+    scrollbar-width: none;
+}
+.city__container{
+    width:50%;
+    margin:0 auto;
+}
+.cityDetail__hOffers, .cityDetail__tOffers
+{
+    width:100%;
+    border-radius:25px;
+    background-color: rgb(201, 196, 196);
+    box-shadow: 3px 3px 2px black;
+}
+.cityDetail__hOffers, .cityDetail__tOffers{
+    width:50%;
+    margin:0 auto;
+}

@@ -1,0 +1,17 @@
+:scope{
+    --gradBackground: -moz-linear-gradient(to right,rgb(255, 230, 0,0.7),rgb(255, 123, 0));
+    --footerBackground: -moz-linear-gradient(to right, rgba(255, 255, 255, 0.726),rgba(255, 255, 255, 0.945));
+}
+.footer{
+    position:relative;
+    bottom:0%;
+    z-index: -1;
+    width:100%;
+    text-align: center;
+    padding:2%;
+    background: var(--gradBackground);
+    border-radius: 0 25px 0 25px;
+}
+.footer>p{
+    color:white;
+}

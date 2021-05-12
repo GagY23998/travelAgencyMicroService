@@ -1,0 +1,18 @@
+.ratingItem{
+    width:100%;
+    display:flex;
+}
+.hotelSection{
+   width:50%;
+   border-radius:25px;
+}
+.ratingSection{
+   width:50%;
+   border-radius:25px;
+}
+.ratingItem{
+   display:flex;
+}
+.ReviewContainer{
+   width:50%;
+}

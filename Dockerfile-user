@@ -1,0 +1,18 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
+WORKDIR /app
+
+
+COPY ["MessageBroker.Consumers/MessageBroker.Consumers.csproj","MessageBroker.Consumers/"]
+COPY ["TravelAgency.UserService/TravelAgency.UserService.csproj","TravelAgency.UserService/"]
+RUN dotnet restore "MessageBroker.Consumers/MessageBroker.Consumers.csproj"
+RUN dotnet restore "TravelAgency.UserService/TravelAgency.UserService.csproj"
+
+COPY . ./
+RUN dotnet publish "TravelAgency.UserService/TravelAgency.UserService.csproj" -c Release -o out
+
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+WORKDIR /app
+COPY --from=build-env /app/out .
+ADD TravelAgency.UserService/Images Images/
+ENTRYPOINT ["dotnet","TravelAgency.UserService.dll"]
+

@@ -1,0 +1,37 @@
+.bfilter__container{
+    display:flex;
+    width:100%;
+    background: midnightblue;
+    color:whitesmoke;
+    flex-flow:column wrap;
+    align-content: center;
+    border-radius: 25px;
+    box-shadow: 3px 3px 2px solid whitesmoke inset 3px 3px 3px solid whitesmoke;
+}
+.user__booking__filter,.date__booking_filter{
+    display: flex;
+    padding: 0.125rem 0;
+}
+.user__booking__field,.date__booking_field{
+    display: flex;
+    margin:auto;
+    padding: 0.2rem 0;
+}
+.user__booking__field>label,
+.date__booking_field>label{
+    margin-right: auto;
+}
+.user__booking__field>input,
+.date__booking_field>input{ 
+    margin-left: auto;
+}
+.btn__booking__filter{
+    appearance: none;
+    border: 1px solid whitsmoke;
+    color:whitesmoke;
+    background: transparent;
+    box-shadow: 3px solid whitsmoke;
+    margin:auto;
+    padding: 0.15rem;
+    border-radius:25px;
+}

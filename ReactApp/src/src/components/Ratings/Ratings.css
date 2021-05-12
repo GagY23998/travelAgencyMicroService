@@ -1,0 +1,11 @@
+.ratingWrapper{
+    width:100%;
+}
+.ratingContainer{
+    background-color:whitesmoke;
+    border-radius: 25px;
+}
+.ratingItem{
+    width:50%;
+    display:flex;
+}

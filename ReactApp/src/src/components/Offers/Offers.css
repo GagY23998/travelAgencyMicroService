@@ -1,0 +1,23 @@
+.offerSection{
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+    background: #F7F8F8;  /* fallback for old browsers */
+    background: #373b44;
+    border-radius:25px;
+    gap:1em;
+    place-items: center;
+    padding:0rem 1.2rem 2.5rem 1.2rem;
+}
+.section__label{
+    position: absolute;
+    transform: rotateZ(-10deg) translate3d(6px,5px,0);
+    color: wheat;
+}
+.hotelOffers{
+    padding:2px;
+    border-radius:20px;
+}
+.offer>hr{
+    border: 1px solid white;
+    width:80%;
+}

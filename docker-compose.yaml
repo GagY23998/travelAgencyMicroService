@@ -1,0 +1,165 @@
+version : '3.8'
+services:
+    rabbitmq:
+        hostname: rabbitMQbroker
+        image: masstransit/rabbitmq
+        container_name: rabbitbroker
+        ports:
+            - "5672:5672"
+            - "15672:15672"
+    # messagebroker:
+    #     hostname: rabbitmq
+    #     build: 
+    #         context: "./"
+    #         dockerfile: "Dockerfile-msgBroker"
+    #     container_name: messagebroker
+    #     ports:
+    #       - "5000:80"
+    #     depends_on: 
+    #         - rabbitmq
+    mongodb:
+        container_name: mongobooking
+        image: mongo
+    userdb:
+        image: postgres
+        container_name: userdbserver
+        ports: 
+            - "5435:5432"
+        environment: 
+            - POSTGRES_DB=User 
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=Gagijames23
+        volumes:
+            - ./UserDB.sql:/docker-entrypoint-initdb.d/init.sql
+    hoteldb:
+        image: postgres
+        container_name: hoteldbserver
+        ports: 
+            - "5440:5432"
+        environment: 
+            - POSTGRES_DB=Hotel 
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=Gagijames23
+        volumes:
+            - ./HotelDB.sql:/docker-entrypoint-initdb.d/init.sql
+    traveldb:
+        image: postgres
+        container_name: traveldbserver
+        ports:
+            - "5434:5432"
+        environment: 
+            - POSTGRES_DB=Travel 
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=Gagijames23
+        volumes:
+          - ./TravelDB.sql:/docker-entrypoint-initdb.d/init.sql
+    mssqldb:
+        image: mcr.microsoft.com/mssql/server
+        container_name: mssqldbserver
+        ports:
+            - "11433:1433"
+        environment:
+            - MSSQL_SA_PASSWORD=P@ssword123
+            - ACCEPT_EULA=Y
+    reactapp:
+        container_name: webapp
+        build: reactapp/src/
+        ports:
+            - "3000:3000"
+    envoygateway:
+        build: Envoy/
+        ports: 
+            - "9901:9901"
+            - "10000:10000"
+            - "10001:10001"
+        volumes: 
+            - ./Envoy/envoy.yaml:/etc/envoy/envoy.yaml
+            - ./Envoy/https.crt:/etc/ssl/certs/https.crt
+            - ./Envoy/key.pem:/etc/ssl/certs/key.pem
+    # apigatway:
+    #     build: APIGatway/
+    #     ports:
+    #         - "8100:80"
+    #         - "8101:443"
+    travelagency.hotelservice:
+        # build: TravelAgency.HotelService/
+        build:
+            context: "./"
+            dockerfile: "Dockerfile-hotel"
+        container_name: hservice
+        ports: 
+            - "8080:80"
+            - "8082:443"
+        environment: 
+            - ASPNETCORE_URLS=https://+;http://+;
+            - ASPNETCORE_HTTPS_PORT="8082"
+            - ASPNETCORE_ENVIROMENT="Development"
+            - ASPNETCORE_Kestrel__Certificates__Development__Password=password
+        depends_on:
+            - hoteldb
+        volumes:
+            - ${APPDATA}\microsoft\usersecrets\:/root/.microsoft/usersecrets
+            - ${USERPROFILE}\.aspnet\https:/root/.aspnet/https/
+
+    travelagency.travelservice:
+        # build: TravelAgency.TravelService/
+        build:
+            context: "./"
+            dockerfile: "Dockerfile-travel"
+        container_name: tservice
+        ports:
+            - "8081:80"
+            - "8083:443"
+        environment:
+            - ASPNETCORE_URLS=https://+;http://+;
+            - ASPNETCORE_HTTPS_PORT="8083"
+            - ASPNETCORE_ENVIROMENT="Development"
+            - ASPNETCORE_Kestrel__Certificates__Development__Password=password
+        volumes:
+            - ${APPDATA}\microsoft\usersecrets\:/root/.microsoft/usersecrets
+            - ${USERPROFILE}\.aspnet\https:/root/.aspnet/https/
+        depends_on:
+            - traveldb
+
+    travelagency.bookingservice:
+        # build: TravelAgency.BookingService/
+        container_name: bservice
+        build:
+            context: "./"
+            dockerfile: "Dockerfile-booking"
+        ports:
+            - "9998:80"
+            - "9999:443"
+        environment:
+            - ASPNETCORE_URLS=https://+;http://+;
+            - ASPNETCORE_HTTPS_PORT="9999"
+            - ASPNETCORE_ENVIROMENT="Development"
+            - ASPNETCORE_Kestrel__Certificates__Development__Password=password
+        depends_on:
+            - mongodb
+            - mssqldb
+            - rabbitmq
+        volumes:
+            - ${APPDATA}\microsoft\usersecrets\:/root/.microsoft/usersecrets
+            - ${USERPROFILE}\.aspnet\https:/root/.aspnet/https/
+            # - D:\Users\User\AppData\Roaming\microsoft\usersecrets\:/root/.microsoft/usersecrets
+            # - D:\.aspnet\https:/root/.aspnet/https/
+    travelagency.userservice:
+        # build: TravelAgency.UserService/
+        build:
+            context: "./"
+            dockerfile: "Dockerfile-user"
+        container_name: uservice
+        ports:
+            - "8088:80"
+            - "8089:443"
+        environment:
+            - ASPNETCORE_URLS=https://+;http://+;
+            - ASPNETCORE_HTTPS_PORT="8089"
+            - ASPNETCORE_ENVIROMENT="Development"
+            - ASPNETCORE_Kestrel__Certificates__Development__Password=password
+        depends_on:
+            - userdb
+        volumes:
+            - ${APPDATA}\microsoft\usersecrets\:/root/.microsoft/usersecrets
+            - ${USERPROFILE}\.aspnet\https:/root/.aspnet/https/

@@ -1,0 +1,18 @@
+.Sidebar{
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    transform: translateX(-80%);
+    display: flex;
+    flex-flow:column wrap;
+    width:10%;
+    grid-area: sidebar;
+    height: 94.2vh;
+}
+.Sidebar:hover{
+    transition:transform ease-in-out 1.2s;
+    transform: translateX(0%);
+}
+.Sidebar:not(:hover){
+    transition:transform ease-in-out 1.2s;
+    transform: translateX(-80%);
+}

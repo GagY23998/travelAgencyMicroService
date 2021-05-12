@@ -1,0 +1,9 @@
+C:\Users\User\Desktop\TravelAgencyMicroService\MessageBroker.Consumers\bin\Debug\netcoreapp3.1\MessageBroker.Consumers.deps.json
+C:\Users\User\Desktop\TravelAgencyMicroService\MessageBroker.Consumers\bin\Debug\netcoreapp3.1\MessageBroker.Consumers.dll
+C:\Users\User\Desktop\TravelAgencyMicroService\MessageBroker.Consumers\bin\Debug\netcoreapp3.1\MessageBroker.Consumers.pdb
+C:\Users\User\Desktop\TravelAgencyMicroService\MessageBroker.Consumers\obj\Debug\netcoreapp3.1\MessageBroker.Consumers.csprojAssemblyReference.cache
+C:\Users\User\Desktop\TravelAgencyMicroService\MessageBroker.Consumers\obj\Debug\netcoreapp3.1\MessageBroker.Consumers.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\TravelAgencyMicroService\MessageBroker.Consumers\obj\Debug\netcoreapp3.1\MessageBroker.Consumers.AssemblyInfo.cs
+C:\Users\User\Desktop\TravelAgencyMicroService\MessageBroker.Consumers\obj\Debug\netcoreapp3.1\MessageBroker.Consumers.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\TravelAgencyMicroService\MessageBroker.Consumers\obj\Debug\netcoreapp3.1\MessageBroker.Consumers.dll
+C:\Users\User\Desktop\TravelAgencyMicroService\MessageBroker.Consumers\obj\Debug\netcoreapp3.1\MessageBroker.Consumers.pdb

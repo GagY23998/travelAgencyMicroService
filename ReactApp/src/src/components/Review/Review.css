@@ -1,0 +1,7 @@
+.ReviewContainer{
+    width:50%;
+}
+.user__container{
+    display:flex;
+    justify-content: space-around;
+}

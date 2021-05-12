@@ -1,0 +1,13 @@
+.panel__nav{
+    display:flex;
+    width:100%;
+    background:whitsmoke;
+}
+.panel__nav__item{
+    text-decoration: none;
+    font-family: 'Montserrat';
+    margin: 0.25rem auto;
+}
+.panel__nav__item:visited{
+    color:midnightblue;
+}

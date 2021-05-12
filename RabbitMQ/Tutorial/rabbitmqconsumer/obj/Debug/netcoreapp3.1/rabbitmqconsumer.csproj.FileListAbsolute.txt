@@ -1,0 +1,17 @@
+C:\Users\User\Desktop\TravelAgencyMicroService\rabbitmq\consumer\rabbitmqconsumer\bin\Debug\netcoreapp3.1\rabbitmqconsumer.exe
+C:\Users\User\Desktop\TravelAgencyMicroService\rabbitmq\consumer\rabbitmqconsumer\bin\Debug\netcoreapp3.1\rabbitmqconsumer.deps.json
+C:\Users\User\Desktop\TravelAgencyMicroService\rabbitmq\consumer\rabbitmqconsumer\bin\Debug\netcoreapp3.1\rabbitmqconsumer.runtimeconfig.json
+C:\Users\User\Desktop\TravelAgencyMicroService\rabbitmq\consumer\rabbitmqconsumer\bin\Debug\netcoreapp3.1\rabbitmqconsumer.runtimeconfig.dev.json
+C:\Users\User\Desktop\TravelAgencyMicroService\rabbitmq\consumer\rabbitmqconsumer\bin\Debug\netcoreapp3.1\rabbitmqconsumer.dll
+C:\Users\User\Desktop\TravelAgencyMicroService\rabbitmq\consumer\rabbitmqconsumer\bin\Debug\netcoreapp3.1\rabbitmqconsumer.pdb
+C:\Users\User\Desktop\TravelAgencyMicroService\rabbitmq\consumer\rabbitmqconsumer\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\User\Desktop\TravelAgencyMicroService\rabbitmq\consumer\rabbitmqconsumer\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
+C:\Users\User\Desktop\TravelAgencyMicroService\rabbitmq\consumer\rabbitmqconsumer\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
+C:\Users\User\Desktop\TravelAgencyMicroService\rabbitmq\consumer\rabbitmqconsumer\obj\Debug\netcoreapp3.1\rabbitmqconsumer.csprojAssemblyReference.cache
+C:\Users\User\Desktop\TravelAgencyMicroService\rabbitmq\consumer\rabbitmqconsumer\obj\Debug\netcoreapp3.1\rabbitmqconsumer.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\TravelAgencyMicroService\rabbitmq\consumer\rabbitmqconsumer\obj\Debug\netcoreapp3.1\rabbitmqconsumer.AssemblyInfo.cs
+C:\Users\User\Desktop\TravelAgencyMicroService\rabbitmq\consumer\rabbitmqconsumer\obj\Debug\netcoreapp3.1\rabbitmqconsumer.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\TravelAgencyMicroService\rabbitmq\consumer\rabbitmqconsumer\obj\Debug\netcoreapp3.1\rabbitmqconsumer.csproj.CopyComplete
+C:\Users\User\Desktop\TravelAgencyMicroService\rabbitmq\consumer\rabbitmqconsumer\obj\Debug\netcoreapp3.1\rabbitmqconsumer.dll
+C:\Users\User\Desktop\TravelAgencyMicroService\rabbitmq\consumer\rabbitmqconsumer\obj\Debug\netcoreapp3.1\rabbitmqconsumer.pdb
+C:\Users\User\Desktop\TravelAgencyMicroService\rabbitmq\consumer\rabbitmqconsumer\obj\Debug\netcoreapp3.1\rabbitmqconsumer.genruntimeconfig.cache

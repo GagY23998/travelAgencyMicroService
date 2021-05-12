@@ -1,0 +1,29 @@
+.cartItems__container{
+    position: fixed;
+    height:500px;
+    width:500px;
+    overflow-y:scroll;
+    scrollbar-width: none;
+    border-radius: 25px;
+    background: whitesmoke;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.445) inset;
+    right:5%;
+    top:15%;
+    display:flex;
+    flex-flow: column wrap;
+}
+.cartItems__container> button{
+    margin:auto auto 10px auto;
+    appearance:none;
+    background: white;
+    color:orange;
+    padding:0.525rem;
+    font-family: 'Montserrat';
+    border:none;
+    border-radius: 25px;
+}
+.cartItems__container> button:hover{
+    background-color: orange;
+    color:white;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+}
